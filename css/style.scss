@@ -1,0 +1,151 @@
+/* 文字コードの指定
+------------------------------------------------------------*/
+@charset "UTF-8";
+
+/* Google Fonts用のCSSを読み込み
+------------------------------------------------------------*/
+@import 'https://fonts.googleapis.com/css?family=Abel';
+
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+/* フォント色指定
+------------------------------------------------------------*/
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$haikei : #f9f8f6;
+$moji : #887f69;
+$blue1 : #eaf2f4;
+$midashi:#e2ddd4;
+$box:#ffffff;
+
+/* フォントの大きさ指定
+------------------------------------------------------------*/
+
+.fsize8 {font-size:8px;}
+.fsize10 {font-size:10px;}
+.fsize12 {font-size:12px;}
+.fsize14 {font-size:14px;}
+.fsize16 {font-size:16px;}
+
+
+
+html{
+    font-size: 62.5%; /* ベースとなるフォントサイズの定義 */
+}
+
+body{
+    font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; /* フォントの種類 */
+    font-size: 1.4rem; /* フォントサイズ */
+    line-height: 1.6; /* 行間 */
+    letter-spacing: .1em; /* 文字間隔 */
+    color: $moji; /* 文字色 */
+    background-color: $haikei; /* 背景色 */
+}
+
+header{
+    
+    #header_in{
+        padding-top: 10px;
+        padding-bottom:4px;
+    }
+    
+    @media (min-width: 551px) {
+    
+        .row{bottom: 0;}
+
+        .sp_navi{
+            display: none;
+        }
+
+        #header_in{
+            padding: 15px 0 10px 0;
+        }
+        
+        .pc_navi{
+            margin-top: 10px;
+        }
+
+        .pc_navi_li{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+            margin:0;
+            padding:0;
+
+            li{
+                list-style:none;
+                margin: 5px 0 0 0;
+                padding: 0;
+
+                a{
+                  color: #626262;
+                  text-decoration: none;
+                  font-weight: bold;
+                  @include fontsize(14);
+                  float: left;
+                  padding-right: 10px;
+                }
+
+                a:hover{
+                  color: $blue1;
+                }
+             }
+             // li
+        }
+        // .pc_navi_li
+    }
+    // min-width: 551px PC限定ヘッダー装飾
+  
+    @media (max-width: 550px) {
+        .pc_navi{
+            display: none;
+        }
+    }
+    // max-width: 550px PCヘッダーをスマホ非表示
+}
+// header
+
+main{
+    #main_in{
+        padding: 15px 0 10px 0;
+        
+        .container{
+            width:80%;
+        }
+
+            .items{
+                    background-color:$box;
+            }
+            .wrap{
+                display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                -webkit-box-pack:justify;
+                -ms-flex-pack:justify;
+                justify-content:space-between;
+                
+                .delivery{
+                    width:46%;
+                    background-color:$box;
+                    font-weight: bold;
+                    padding: 10px;
+                }
+                
+                .payment{
+                    width:46%;
+                    background-color:$box;
+                    font-weight: bold;
+                    padding: 10px;
+                }
+            }
+        
+            .sideber{
+                float: left;
+            }
+        
+    }
+}

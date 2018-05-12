@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* 文字コードの指定
+------------------------------------------------------------*/
+/* Google Fonts用のCSSを読み込み
+------------------------------------------------------------*/
+@import "https://fonts.googleapis.com/css?family=Abel";
+/* フォント色指定
+------------------------------------------------------------*/
+/* フォントの大きさ指定
+------------------------------------------------------------*/
+.fsize8 {
+  font-size: 8px; }
+
+.fsize10 {
+  font-size: 10px; }
+
+.fsize12 {
+  font-size: 12px; }
+
+.fsize14 {
+  font-size: 14px; }
+
+.fsize16 {
+  font-size: 16px; }
+
+html {
+  font-size: 62.5%;
+  /* ベースとなるフォントサイズの定義 */ }
+
+body {
+  font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  /* フォントの種類 */
+  font-size: 1.4rem;
+  /* フォントサイズ */
+  line-height: 1.6;
+  /* 行間 */
+  letter-spacing: .1em;
+  /* 文字間隔 */
+  color: #887f69;
+  /* 文字色 */
+  background-color: #f9f8f6;
+  /* 背景色 */ }
+
+header #header_in {
+  padding-top: 10px;
+  padding-bottom: 4px; }
+@media (min-width: 551px) {
+  header .row {
+    bottom: 0; }
+  header .sp_navi {
+    display: none; }
+  header #header_in {
+    padding: 15px 0 10px 0; }
+  header .pc_navi {
+    margin-top: 10px; }
+  header .pc_navi_li {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    header .pc_navi_li li {
+      list-style: none;
+      margin: 5px 0 0 0;
+      padding: 0; }
+      header .pc_navi_li li a {
+        color: #626262;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        font-size: 1.4rem;
+        float: left;
+        padding-right: 10px; }
+      header .pc_navi_li li a:hover {
+        color: #eaf2f4; } }
+@media (max-width: 550px) {
+  header .pc_navi {
+    display: none; } }
+
+main #main_in {
+  padding: 15px 0 10px 0; }
+  main #main_in .container {
+    width: 80%; }
+  main #main_in .items {
+    background-color: #ffffff; }
+  main #main_in .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    main #main_in .wrap .delivery {
+      width: 46%;
+      background-color: #ffffff;
+      font-weight: bold;
+      padding: 10px; }
+    main #main_in .wrap .payment {
+      width: 46%;
+      background-color: #ffffff;
+      font-weight: bold;
+      padding: 10px; }
+  main #main_in .sideber {
+    float: left; }
+
+/*# sourceMappingURL=style.css.map */
