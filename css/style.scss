@@ -17,20 +17,29 @@
 $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
 $haikei : #f9f8f6;
 $moji : #887f69;
+$kuromoji: #000000;
 $blue1 : #eaf2f4;
 $midashi:#e2ddd4;
 $box:#ffffff;
+$nav:#887f69;
+$copy:#b8b4ac;
+$search:#eeeeee;
+$searchmoji:#b5b5b5;
+
+
 
 /* フォントの大きさ指定
 ------------------------------------------------------------*/
 
 .fsize8 {font-size:8px;}
 .fsize10 {font-size:10px;}
+.fsize11 {font-size:11px;}
 .fsize12 {font-size:12px;}
 .fsize14 {font-size:14px;}
 .fsize16 {font-size:16px;}
 
-
+/* 共通
+------------------------------------------------------------*/
 
 html{
     font-size: 62.5%; /* ベースとなるフォントサイズの定義 */
@@ -44,6 +53,36 @@ body{
     color: $moji; /* 文字色 */
     background-color: $haikei; /* 背景色 */
 }
+
+p{
+    color:$kuromoji;
+    font-weight: normal;
+    font-size:12px;
+    font-family:Hiragino Kaku Gothic ProN;
+}
+
+.box{
+    background-color:$box;
+}
+
+.nav_title{
+    background-color:$nav;
+    padding:10px;
+    
+}
+
+hr {
+    border-width: 1px 0px 0px 0px; /* 太さ */
+    border-style: solid; /* 線種 */
+    border-color: $nav;   /* 線色 */
+    height: 1px;         /* 高さ(※古いIE用) */
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+
+/* 個別
+------------------------------------------------------------*/
 
 header{
     
@@ -116,10 +155,74 @@ main{
         .container{
             width:80%;
         }
-
-            .items{
-                    background-color:$box;
+            .newitems{
+                margin:15px 0;
             }
+            .popular{
+                margin:15px 0; 
+            }
+            .guide{
+                margin:15px 0; 
+            }
+            
+            .items{
+                margin-top:15px;
+                display:flex;
+                flex-wrap: wrap;
+                
+            }
+            .item{
+                width: 25%;
+                padding: 15px;
+                margin: 5px;
+                
+                p{
+                    padding:5px 0 10px 0;
+                }
+            }
+            .img{
+                max-width: 205px;
+                height: 205px;
+                background-size: cover;
+            }
+            .item_01{
+                background-image: url("../images/top/item_01.jpg");
+            }
+            .item_02{
+                background-image: url("../images/top/item_02.jpg");
+            }
+            .item_03{
+                background-image: url("../images/top/item_03.jpg");
+            }
+            .item_04{
+                background-image: url("../images/top/item_04.jpg");
+            }
+            .item_05{
+                background-image: url("../images/top/item_05.jpg");
+            }
+            .item_06{
+                background-image: url("../images/top/item_06.jpg");
+            }
+            .item_07{
+                background-image: url("../images/top/item_07.jpg");
+            }
+            .item_08{
+                background-image: url("../images/top/item_08.jpg");
+            }
+            .item_09{
+                background-image: url("../images/top/item_09.jpg");
+            }
+            .item_10{
+                background-image: url("../images/top/item_10.jpg");
+            }
+            .item_11{
+                background-image: url("../images/top/item_11.jpg");
+            }
+            .item_12{
+                background-image: url("../images/top/item_12.jpg");
+            }
+
+                    
             .wrap{
                 display:-webkit-box;
                 display:-ms-flexbox;
@@ -128,14 +231,9 @@ main{
                 -ms-flex-pack:justify;
                 justify-content:space-between;
                 
-                .delivery{
-                    width:46%;
-                    background-color:$box;
-                    font-weight: bold;
-                    padding: 10px;
-                }
-                
-                .payment{
+                .guide_box{
+                    margin-top:15px;
+                    display:inline-block;
                     width:46%;
                     background-color:$box;
                     font-weight: bold;
@@ -144,8 +242,71 @@ main{
             }
         
             .sideber{
-                float: left;
+                
+                
+                .itemserch{
+                    padding:10px;
+                    
+                    .search{
+                        input{
+                            background-color:$search;
+                            border-radius: 0;
+                            color:$searchmoji;
+                            font-size:11px;
+                            font-style:oblique;
+                            margin:0px;
+                            width:80%;
+                        }
+                        img{
+                        float: right;
+                        }
+                    }
+                }
+                
+                .nav_title{
+                    margin-top: 10px;
+                    text-align:left;
+                    
+                    
+                }
+                .category{
+                    padding:10px;
+                    margin: 2px 0;
+                }    
+                .more{
+                    padding: 10px 0 0;
+                }
+                .about,.shop_info{
+                    text-align:center;
+                }
+                p{
+                    text-align:left;
+                }
+                
             }
         
     }
+}
+
+footer{
+    text-align: center;
+    #footer_in{
+    padding: 15px 0 10px 0;
+    
+        .pagetop{
+            text-align: right;
+        }
+        
+        .copy{
+            color:$copy;
+            margin-bottom: 10rem;
+        }
+    }
+}
+
+.footer_menu{
+    display: flex; /* 子要素をflexboxで揃える */
+    justify-content: center; /* 子要素をflexboxにより中央に配置する */
+    align-items: center;  /* 子要素をflexboxにより中央に配置する */
+    margin-bottom: 2rem;
 }

@@ -14,6 +14,9 @@
 .fsize10 {
   font-size: 10px; }
 
+.fsize11 {
+  font-size: 11px; }
+
 .fsize12 {
   font-size: 12px; }
 
@@ -23,6 +26,8 @@
 .fsize16 {
   font-size: 16px; }
 
+/* 共通
+------------------------------------------------------------*/
 html {
   font-size: 62.5%;
   /* ベースとなるフォントサイズの定義 */ }
@@ -41,6 +46,33 @@ body {
   background-color: #f9f8f6;
   /* 背景色 */ }
 
+p {
+  color: #000000;
+  font-weight: normal;
+  font-size: 12px;
+  font-family: Hiragino Kaku Gothic ProN; }
+
+.box {
+  background-color: #ffffff; }
+
+.nav_title {
+  background-color: #887f69;
+  padding: 10px; }
+
+hr {
+  border-width: 1px 0px 0px 0px;
+  /* 太さ */
+  border-style: solid;
+  /* 線種 */
+  border-color: #887f69;
+  /* 線色 */
+  height: 1px;
+  /* 高さ(※古いIE用) */
+  margin-top: 1rem;
+  margin-bottom: 2.5rem; }
+
+/* 個別
+------------------------------------------------------------*/
 header #header_in {
   padding-top: 10px;
   padding-bottom: 4px; }
@@ -82,8 +114,50 @@ main #main_in {
   padding: 15px 0 10px 0; }
   main #main_in .container {
     width: 80%; }
+  main #main_in .newitems {
+    margin: 15px 0; }
+  main #main_in .popular {
+    margin: 15px 0; }
+  main #main_in .guide {
+    margin: 15px 0; }
   main #main_in .items {
-    background-color: #ffffff; }
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap; }
+  main #main_in .item {
+    width: 25%;
+    padding: 15px;
+    margin: 5px; }
+    main #main_in .item p {
+      padding: 5px 0 10px 0; }
+  main #main_in .img {
+    max-width: 205px;
+    height: 205px;
+    background-size: cover; }
+  main #main_in .item_01 {
+    background-image: url("../images/top/item_01.jpg"); }
+  main #main_in .item_02 {
+    background-image: url("../images/top/item_02.jpg"); }
+  main #main_in .item_03 {
+    background-image: url("../images/top/item_03.jpg"); }
+  main #main_in .item_04 {
+    background-image: url("../images/top/item_04.jpg"); }
+  main #main_in .item_05 {
+    background-image: url("../images/top/item_05.jpg"); }
+  main #main_in .item_06 {
+    background-image: url("../images/top/item_06.jpg"); }
+  main #main_in .item_07 {
+    background-image: url("../images/top/item_07.jpg"); }
+  main #main_in .item_08 {
+    background-image: url("../images/top/item_08.jpg"); }
+  main #main_in .item_09 {
+    background-image: url("../images/top/item_09.jpg"); }
+  main #main_in .item_10 {
+    background-image: url("../images/top/item_10.jpg"); }
+  main #main_in .item_11 {
+    background-image: url("../images/top/item_11.jpg"); }
+  main #main_in .item_12 {
+    background-image: url("../images/top/item_12.jpg"); }
   main #main_in .wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -91,17 +165,55 @@ main #main_in {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
-    main #main_in .wrap .delivery {
+    main #main_in .wrap .guide_box {
+      margin-top: 15px;
+      display: inline-block;
       width: 46%;
       background-color: #ffffff;
       font-weight: bold;
       padding: 10px; }
-    main #main_in .wrap .payment {
-      width: 46%;
-      background-color: #ffffff;
-      font-weight: bold;
-      padding: 10px; }
-  main #main_in .sideber {
-    float: left; }
+  main #main_in .sideber .itemserch {
+    padding: 10px; }
+    main #main_in .sideber .itemserch .search input {
+      background-color: #eeeeee;
+      border-radius: 0;
+      color: #b5b5b5;
+      font-size: 11px;
+      font-style: oblique;
+      margin: 0px;
+      width: 80%; }
+    main #main_in .sideber .itemserch .search img {
+      float: right; }
+  main #main_in .sideber .nav_title {
+    margin-top: 10px;
+    text-align: left; }
+  main #main_in .sideber .category {
+    padding: 10px;
+    margin: 2px 0; }
+  main #main_in .sideber .more {
+    padding: 10px 0 0; }
+  main #main_in .sideber .about, main #main_in .sideber .shop_info {
+    text-align: center; }
+  main #main_in .sideber p {
+    text-align: left; }
+
+footer {
+  text-align: center; }
+  footer #footer_in {
+    padding: 15px 0 10px 0; }
+    footer #footer_in .pagetop {
+      text-align: right; }
+    footer #footer_in .copy {
+      color: #b8b4ac;
+      margin-bottom: 10rem; }
+
+.footer_menu {
+  display: flex;
+  /* 子要素をflexboxで揃える */
+  justify-content: center;
+  /* 子要素をflexboxにより中央に配置する */
+  align-items: center;
+  /* 子要素をflexboxにより中央に配置する */
+  margin-bottom: 2rem; }
 
 /*# sourceMappingURL=style.css.map */
