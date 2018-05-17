@@ -55,10 +55,6 @@ p {
 .box {
   background-color: #ffffff; }
 
-.nav_title {
-  background-color: #887f69;
-  padding: 10px; }
-
 hr {
   border-width: 1px 0px 0px 0px;
   /* 太さ */
@@ -73,149 +69,204 @@ hr {
 
 /* 個別
 ------------------------------------------------------------*/
-header #header_in {
-  padding-top: 10px;
-  padding-bottom: 4px; }
-@media (min-width: 551px) {
-  header .row {
-    bottom: 0; }
-  header .sp_navi {
-    display: none; }
+header {
+  /* ヘッダーPC表示ここから*/
+  /* PC表示ここまで*/ }
   header #header_in {
-    padding: 15px 0 10px 0; }
-  header .pc_navi {
-    margin-top: 10px; }
-  header .pc_navi_li {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    padding: 0; }
-    header .pc_navi_li li {
-      list-style: none;
-      margin: 5px 0 0 0;
-      padding: 0; }
-      header .pc_navi_li li a {
-        color: #626262;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 14px;
-        font-size: 1.4rem;
-        float: left;
-        padding-right: 10px; }
-      header .pc_navi_li li a:hover {
-        color: #eaf2f4; } }
-@media (max-width: 550px) {
-  header .pc_navi {
-    display: none; } }
-
-main #main_in {
-  padding: 15px 0 10px 0; }
-  main #main_in .container {
-    width: 80%; }
-  main #main_in .newitems {
-    margin: 15px 0; }
-  main #main_in .popular {
-    margin: 15px 0; }
-  main #main_in .guide {
-    margin: 15px 0; }
-  main #main_in .items {
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-  main #main_in .item {
-    width: calc( ( 100% - 4px ) / 3 );
-    padding: 15px;
-    box-sizing: border-box; }
-    main #main_in .item:nth-child(n+4) {
-      margin-top: 2px; }
-    main #main_in .item img {
-      width: 100%; }
-    main #main_in .item p {
-      padding: 5px 0 10px 0; }
-  main #main_in .img {
-    max-width: 205px;
-    height: 205px;
-    background-size: cover; }
-  main #main_in .item_01 {
-    background-image: url("../images/top/item_01.jpg"); }
-  main #main_in .item_02 {
-    background-image: url("../images/top/item_02.jpg"); }
-  main #main_in .item_03 {
-    background-image: url("../images/top/item_03.jpg"); }
-  main #main_in .item_04 {
-    background-image: url("../images/top/item_04.jpg"); }
-  main #main_in .item_05 {
-    background-image: url("../images/top/item_05.jpg"); }
-  main #main_in .item_06 {
-    background-image: url("../images/top/item_06.jpg"); }
-  main #main_in .item_07 {
-    background-image: url("../images/top/item_07.jpg"); }
-  main #main_in .item_08 {
-    background-image: url("../images/top/item_08.jpg"); }
-  main #main_in .item_09 {
-    background-image: url("../images/top/item_09.jpg"); }
-  main #main_in .item_10 {
-    background-image: url("../images/top/item_10.jpg"); }
-  main #main_in .item_11 {
-    background-image: url("../images/top/item_11.jpg"); }
-  main #main_in .item_12 {
-    background-image: url("../images/top/item_12.jpg"); }
-  main #main_in .wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-    main #main_in .wrap .guide_box {
-      margin-top: 15px;
-      display: inline-block;
-      width: 46%;
-      background-color: #ffffff;
-      font-weight: bold;
-      padding: 10px; }
-  main #main_in .sideber .itemserch {
-    padding: 10px; }
-    main #main_in .sideber .itemserch .search {
-      position: relative; }
-      main #main_in .sideber .itemserch .search input {
-        background-color: #eeeeee;
-        border-radius: 0;
-        color: #b5b5b5;
-        font-size: 11px;
-        font-style: oblique;
-        margin: 0px;
-        width: 100%;
-        border: 0; }
-      main #main_in .sideber .itemserch .search img {
-        position: absolute;
-        top: 10px;
-        right: 10px; }
-  main #main_in .sideber .nav_title {
-    margin-top: 10px;
-    text-align: left; }
-  main #main_in .sideber .category {
-    padding: 10px;
-    margin: 2px 0; }
-  main #main_in .sideber .more {
-    padding: 10px 0 0; }
-  main #main_in .sideber .about, main #main_in .sideber .shop_info {
+    padding-top: 10px;
+    padding-bottom: 4px; }
+  header .sp_logo {
+    margin: 15px 0;
     text-align: center; }
-  main #main_in .sideber p {
-    text-align: left; }
+  header .pc_logo {
+    display: none; }
+  header .pc_navi {
+    display: none; }
+  header .sp_navi .sp_navi_li {
+    display: flex;
+    justify-content: center; }
+    header .sp_navi .sp_navi_li li + li {
+      margin-left: 10px; }
+  @media (min-width: 550px) {
+    header .row {
+      bottom: 0; }
+    header .sp_logo {
+      display: none; }
+    header .pc_logo {
+      display: block; }
+    header .sp_navi {
+      display: none; }
+    header #header_in {
+      padding: 15px 0 10px 0; }
+    header .pc_navi {
+      margin-top: 10px;
+      display: block; }
+    header .pc_navi_li {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+      header .pc_navi_li li {
+        list-style: none;
+        margin: 5px 0 0 0;
+        padding: 0; }
+        header .pc_navi_li li a {
+          color: #626262;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 14px;
+          font-size: 1.4rem;
+          float: left;
+          padding-right: 10px; }
+        header .pc_navi_li li a:hover {
+          color: #eaf2f4; } }
+
+main {
+  /* メインPC表示ここから*/
+  /* メインPC表示ここまで*/ }
+  main .container {
+    width: calc( 100% - 20px); }
+  main #main_in {
+    padding: 15px 0 10px 0;
+    /* タイトル画像PC表示ここから*/
+    /* タイトル画像PC表示ここまで*/
+    /* アイテムPC表示ここから*/
+    /* PC表示ここまで*/ }
+    main #main_in .sp_img {
+      margin: 15px 0;
+      text-align: center; }
+    main #main_in .pc_img {
+      display: none; }
+    @media (min-width: 550px) {
+      main #main_in .sp_img {
+        display: none; }
+      main #main_in .pc_img {
+        margin: 15px 0;
+        display: block; } }
+    main #main_in .items {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+    main #main_in .item {
+      width: calc( ( 100% - 2px ) / 2 );
+      padding: 15px;
+      box-sizing: border-box; }
+      main #main_in .item:nth-child(n+4) {
+        margin-top: 2px; }
+      main #main_in .item img {
+        width: 100%; }
+      main #main_in .item p {
+        padding: 5px 0 10px 0; }
+    @media (min-width: 550px) {
+      main #main_in .item {
+        width: calc( ( 100% - 4px ) / 3 );
+        padding: 15px;
+        box-sizing: border-box; } }
+    main #main_in .guides {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      /* ショッピングガイドPC表示ここから*/
+      /* PC表示ここまで*/ }
+      main #main_in .guides .guide_box {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        font-weight: bold; }
+        main #main_in .guides .guide_box:nth-child(n+1) {
+          margin-top: 2px; }
+      @media (min-width: 550px) {
+        main #main_in .guides .guide_box {
+          width: calc( ( 100% - 2px ) / 2 ); } }
+    main #main_in .sideber .itemserch {
+      padding: 10px;
+      margin-top: 10px; }
+      main #main_in .sideber .itemserch .search {
+        position: relative; }
+        main #main_in .sideber .itemserch .search input {
+          background-color: #eeeeee;
+          border-radius: 0;
+          color: #b5b5b5;
+          font-size: 11px;
+          font-style: oblique;
+          margin: 0px;
+          width: 100%;
+          border: 0; }
+        main #main_in .sideber .itemserch .search img {
+          position: absolute;
+          top: 10px;
+          right: 10px; }
+    main #main_in .sideber .side_nav .nav_title {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background-color: #887f69; }
+    main #main_in .sideber .side_nav .category {
+      margin-top: 2px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      color: #000000; }
+    main #main_in .sideber .side_nav .img {
+      padding: 10px;
+      box-sizing: border-box;
+      vertical-align: middle;
+      /*確認*/ }
+    main #main_in .sideber .about_own {
+      /*アバウトPC表示ここから*/
+      /* PC表示ここまで*/ }
+      main #main_in .sideber .about_own .nav_title2 {
+        margin-top: 10px;
+        background-color: #887f69;
+        padding: 10px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        text-align: left; }
+      main #main_in .sideber .about_own .more {
+        padding: 10px 0 0; }
+      main #main_in .sideber .about_own .about {
+        padding: 10px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        /*確認*/
+        display: flex; }
+        main #main_in .sideber .about_own .about .about_in {
+          width: calc( ( 100% - 2px ) / 2 ); }
+        main #main_in .sideber .about_own .about .eyecatch {
+          padding: 0 10px; }
+        main #main_in .sideber .about_own .about p {
+          text-align: left; }
+      @media (min-width: 550px) {
+        main #main_in .sideber .about_own .about {
+          display: block;
+          text-align: center;
+          margin: 0; }
+          main #main_in .sideber .about_own .about .about_in {
+            width: 100%;
+            margin: auto; } }
+  @media (min-width: 550px) {
+    main .container {
+      width: 80%; } }
 
 footer {
   text-align: center; }
   footer #footer_in {
-    padding: 15px 0 10px 0; }
+    padding: 15px 0 10px 0;
+    /* フッターPC表示ここから*/
+    /* フッターPC表示ここまで*/ }
     footer #footer_in .pagetop {
-      text-align: right; }
+      text-align: center; }
     footer #footer_in .copy {
       color: #b8b4ac;
       margin-bottom: 10rem; }
+    @media (min-width: 550px) {
+      footer #footer_in .pagetop {
+        text-align: right; } }
 
 .footer_menu {
   display: flex;
