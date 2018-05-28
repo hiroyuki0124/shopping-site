@@ -26,6 +26,9 @@
 .fsize16 {
   font-size: 16px; }
 
+.fsize22 {
+  font-size: 22px; }
+
 /* 共通
 ------------------------------------------------------------*/
 html {
@@ -33,9 +36,9 @@ html {
   /* ベースとなるフォントサイズの定義 */ }
 
 body {
-  font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-family: 'Hiragino Kaku Gothic ProN','游ゴシック', YuGothic, 'メイリオ', Verdana,  Meiryo, sans-serif;
   /* フォントの種類 */
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   /* フォントサイズ */
   line-height: 1.6;
   /* 行間 */
@@ -46,26 +49,27 @@ body {
   background-color: #f9f8f6;
   /* 背景色 */ }
 
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #887f69;
+  padding: 5px 0 10px;
+  margin-bottom: 20px; }
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 0;
+  margin-bottom: 10px; }
+
 p {
   color: #000000;
   font-weight: normal;
-  font-size: 12px;
-  font-family: Hiragino Kaku Gothic ProN; }
+  font-size: 10px;
+  padding: 5px 0; }
 
 .box {
   background-color: #ffffff; }
-
-hr {
-  border-width: 1px 0px 0px 0px;
-  /* 太さ */
-  border-style: solid;
-  /* 線種 */
-  border-color: #887f69;
-  /* 線色 */
-  height: 1px;
-  /* 高さ(※古いIE用) */
-  margin-top: 1rem;
-  margin-bottom: 2.5rem; }
 
 /* 個別
 ------------------------------------------------------------*/
@@ -87,6 +91,8 @@ header {
     justify-content: center; }
     header .sp_navi .sp_navi_li li + li {
       margin-left: 10px; }
+  header .sp_navi .sp_menu_toggle {
+    text-align: right; }
   @media (min-width: 550px) {
     header .row {
       bottom: 0; }
@@ -143,7 +149,7 @@ main {
       main #main_in .sp_img {
         display: none; }
       main #main_in .pc_img {
-        margin: 15px 0;
+        margin: 30px 0;
         display: block; } }
     main #main_in .items {
       margin-top: 15px;
@@ -163,10 +169,9 @@ main {
     @media (min-width: 550px) {
       main #main_in .item {
         width: calc( ( 100% - 4px ) / 3 );
-        padding: 15px;
+        padding: 10px;
         box-sizing: border-box; } }
     main #main_in .guides {
-      margin-top: 15px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -174,14 +179,20 @@ main {
       /* PC表示ここまで*/ }
       main #main_in .guides .guide_box {
         width: 100%;
-        padding: 15px;
+        padding: 10px 20px;
         box-sizing: border-box;
         font-weight: bold; }
-        main #main_in .guides .guide_box:nth-child(n+1) {
+        main #main_in .guides .guide_box:nth-child(n+2) {
           margin-top: 2px; }
       @media (min-width: 550px) {
         main #main_in .guides .guide_box {
-          width: calc( ( 100% - 2px ) / 2 ); } }
+          width: calc( ( 100% - 2px ) / 2 ); }
+          main #main_in .guides .guide_box div {
+            padding-bottom: 10px; }
+          main #main_in .guides .guide_box img {
+            padding: 5px 0; }
+          main #main_in .guides .guide_box .card {
+            padding-top: 10px; } }
     main #main_in .sideber .itemserch {
       padding: 10px;
       margin-top: 10px; }
@@ -232,13 +243,12 @@ main {
       main #main_in .sideber .about_own .about {
         padding: 10px;
         box-sizing: border-box;
-        vertical-align: middle;
-        /*確認*/
+        justify-content: space-between;
         display: flex; }
         main #main_in .sideber .about_own .about .about_in {
           width: calc( ( 100% - 2px ) / 2 ); }
         main #main_in .sideber .about_own .about .eyecatch {
-          padding: 0 10px; }
+          width: calc( 50% - 10px ); }
         main #main_in .sideber .about_own .about p {
           text-align: left; }
       @media (min-width: 550px) {
@@ -246,12 +256,13 @@ main {
           display: block;
           text-align: center;
           margin: 0; }
-          main #main_in .sideber .about_own .about .about_in {
+          main #main_in .sideber .about_own .about .about_in, main #main_in .sideber .about_own .about .eyecatch {
             width: 100%;
             margin: auto; } }
   @media (min-width: 550px) {
     main .container {
-      width: 80%; } }
+      width: 80%;
+      margin-bottom: 35px; } }
 
 footer {
   text-align: center; }
@@ -260,15 +271,25 @@ footer {
     /* フッターPC表示ここから*/
     /* フッターPC表示ここまで*/ }
     footer #footer_in .pagetop {
-      text-align: center; }
+      text-align: center;
+      border-bottom: 1px solid #887f69;
+      padding: 30px 0 50px;
+      margin-bottom: 20px; }
     footer #footer_in .copy {
       color: #b8b4ac;
-      margin-bottom: 10rem; }
+      padding: 5px 0;
+      margin-bottom: 12.5rem; }
     @media (min-width: 550px) {
       footer #footer_in .pagetop {
-        text-align: right; } }
+        text-align: right;
+        padding: 10px 0;
+        margin-top: 1rem;
+        margin-bottom: 3.0rem; }
+        footer #footer_in .pagetop img {
+          padding: 5px 0; } }
 
 .footer_menu {
+  color: #000000;
   display: flex;
   /* 子要素をflexboxで揃える */
   justify-content: center;
@@ -276,5 +297,211 @@ footer {
   align-items: center;
   /* 子要素をflexboxにより中央に配置する */
   margin-bottom: 2rem; }
+
+/* List独自
+------------------------------------------------------------*/
+.breadcrumb {
+  background-color: #e8e4da;
+  margin-bottom: 10px; }
+  .breadcrumb ul {
+    display: flex;
+    padding: 5px; }
+    .breadcrumb ul li {
+      margin-left: 10px;
+      font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif; }
+      .breadcrumb ul li a {
+        color: #887f69;
+        text-decoration: none; }
+
+.pagenation {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .pagenation .page_box {
+    font-family: "Avenir Next";
+    color: #ffffff;
+    background-color: #887f69;
+    font-size: 16px;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    text-decoration: none; }
+
+/* ページ送りボタPC表示ここから*/
+@media (min-width: 550px) {
+  .pagenation .page_box {
+    width: 20%;
+    padding: 10px 5px;
+    font-size: 13px; } }
+/* ページ送りボタンPC表示ここまで*/
+/* Products独自
+------------------------------------------------------------*/
+.item_guide {
+  padding: 10px 4.66666666667%; }
+
+/* 1column分 */
+.item_header, .item_carousel, .item_price,
+.item_quantity, .item_add, .item_description {
+  padding: 10px 0; }
+
+.item_header {
+  padding: 10px 0; }
+  .item_header .item_title {
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 5px;
+    text-align: left; }
+  .item_header .item_num {
+    text-indent: 7em; }
+
+/* Product_header_PC表示ここから*/
+@media (min-width: 550px) {
+  .item_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0; }
+    .item_header .item_title {
+      padding-bottom: 0px; }
+    .item_header .item_num {
+      text-indent: 0em; } }
+/* Product_header_PC表示ここから*/
+.item_slide {
+  line-height: 0;
+  padding: 20px 0;
+  border-top: 1px solid #e3e8cf;
+  border-bottom: 1px solid #e3e8cf; }
+  .item_slide .item_slide_main {
+    flex: 40px 5 5; }
+  .item_slide .item_slide_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .item_slide .item_slide_list div {
+      width: calc( 20% - 5px );
+      margin-top: 10px; }
+      .item_slide .item_slide_list div img {
+        width: 100%; }
+
+/* Product_item_slide_PC表示ここから*/
+@media (min-width: 550px) {
+  .item_slide {
+    display: flex; }
+    .item_slide .item_slide_list {
+      flex: 10px 2 2;
+      margin-left: 10px; }
+      .item_slide .item_slide_list div {
+        width: calc( 50% - 5px ); }
+        .item_slide .item_slide_list div:nth-child(n+3) {
+          margin-top: 10px; } }
+/* Product_item_slide_PC表示ここから*/
+.item_color {
+  padding: 20px 0; }
+  .item_color img {
+    padding-bottom: 15px; }
+
+.item_sizetable table {
+  width: 100%;
+  text-align: center; }
+  .item_sizetable table th, .item_sizetable table td {
+    padding: 10px 0;
+    /*テーブル内余白*/
+    text-align: center;
+    border: 1px solid #e3e8cf;
+    vertical-align: middle;
+    /*高さ中央*/ }
+  .item_sizetable table th {
+    /*table内のthに対して*/
+    background-color: #f9f9f5;
+    /*背景色*/
+    width: 20%; }
+    .item_sizetable table th:nth-child(n+2) {
+      width: calc( (100% - 20%) /3); }
+  .item_sizetable table td:nth-child(1) {
+    background-color: #f9f9f5;
+    /*背景色*/ }
+  .item_sizetable table .chkbox input {
+    margin: 0;
+    width: 15px;
+    /* ボックスの横幅 */
+    height: 15px;
+    /* ボックスの縦幅 */ }
+
+.item_overview .price, .item_overview .quantity {
+  display: flex;
+  border-top: 1px solid #e3e8cf; }
+  .item_overview .price .title_img, .item_overview .quantity .title_img {
+    width: 115px;
+    vertical-align: middle;
+    /*高さ中央*/
+    margin: auto 0; }
+.item_overview .price {
+  padding: 20px 0; }
+  .item_overview .price .price_value {
+    color: #e80f66;
+    font-style: oblique; }
+.item_overview .quantity {
+  padding: 15px 0; }
+  .item_overview .quantity input {
+    margin-bottom: 0rem; }
+.item_overview .add_to_cart {
+  text-align: center;
+  border-top: 1px solid #e3e8cf;
+  padding-top: 20px; }
+
+/* Product_item_overview_PC表示ここから*/
+@media (min-width: 550px) {
+  .item_overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #e3e8cf;
+    margin-bottom: 20px; }
+    .item_overview .add_to_cart {
+      border-top: none;
+      padding-top: 0px; } }
+/* Product_item_overview_PC表示ここまで*/
+.item_descriptiontable {
+  padding: 10px 0;
+  margin: 10px 0 50px; }
+  .item_descriptiontable table {
+    width: 100%;
+    text-align: center; }
+    .item_descriptiontable table td, .item_descriptiontable table th {
+      padding: 10px 0;
+      /*テーブル内余白*/
+      border: 1px solid #e3e8cf;
+      vertical-align: middle;
+      /*高さ中央*/ }
+    .item_descriptiontable table td {
+      /*table内のthに対して*/
+      text-align: center;
+      background-color: #f9f9f5;
+      /*背景色*/
+      width: calc(100%/3); }
+    .item_descriptiontable table th {
+      padding-left: 10px; }
+
+/* Product_item_description_PC表示ここから*/
+@media (min-width: 550px) {
+  .item_descriptiontable {
+    padding: 10px; } }
+/* Product_item_description_PC表示ここまで*/
+/*----その他-----*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/*----inputの増減ボタン削除（Chrome,Safari）-----*/
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+/*----inputの増減ボタン削除（Firefox,IE）-----*/
+.menu_icon {
+  cursor: pointer; }
+
+.sp_menu_toggle {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
